@@ -7,74 +7,226 @@
             <li class=" text-blue-700 font-semibold">
                 Home
             </li>
-            <li class="relative text-gray-700" x-data="{modal:false}">
+            <li class=" text-gray-700" x-data="{modal:false}">
                 <div @click="modal=!modal" class="cursor-pointer font-bold bg-white px-4 py-2 rounded-lg shadow-md">
                     Services
                 </div>
                 <div x-show="modal" x-transition x-cloak
-                class="absolute top-16 left-0 bg-white p-5 rounded-lg shadow-md w-[550px]">
-                    <div class="flex gap-8 items-center">
-                        <div class="w-2/5 flex flex-col gap-5 border-r pr-5">
+                class="absolute mt-2 top-16 left-0  w-screen flex items-center justify-center">
+                    <div class="flex gap-5 items-center w-[800px] bg-white p-5 rounded-lg shadow-md" x-data="{tab:0}">
+                        <div class="w-8/12 grid grid-cols-2 gap-2 border-r pr-3">
 
                             <div class="relative group">
-                                <a class="flex gap-5 justify-between items-center" href="">
+                                <a @mouseover="tab=1" @mouseleave="tab=0"
+                                 class="flex gap-5 justify-between items-center hover:bg-gray-100 p-2 rounded-lg" href="">
                                     <div class="flex items-center gap-2">
-                                        <span class="flex w-10 h-10 items-center justify-center shadow-md rounded-md text-2xl bg-white group-hover:bg-slate-800 group-hover:text-slate-100">
+                                        <span class="flex w-12 h-12 items-center justify-center shadow-md rounded-md text-3xl bg-white group-hover:bg-slate-800 group-hover:text-slate-100">
                                             <i class="fa-brands fa-figma"></i>
                                         </span>
                                         <h2 class="font-semibold  flex flex-col">
-                                            <span class="font-bold">
+                                            <span class="font-bold text-base">
                                                 UI/UX
                                             </span>
                                             <span class="text-xs">
-                                                Design By Figma
+                                                Design UI By Figma
                                             </span>
                                         </h2>
                                     </div>
-                                    {{-- <span class="hidden group-hover:flex">
+                                    <span class="hidden group-hover:flex">
                                         <i class="fa-solid fa-arrow-right text-xl"></i>
-                                    </span> --}}
+                                    </span>
                                 </a>
+                            </div>
 
+                            <div class="relative group">
+                                <a @mouseover="tab=2" @mouseleave="tab=0"
+                                 class="flex gap-5 justify-between items-center hover:bg-gray-100 p-2 rounded-lg" href="">
+                                    <div class="flex items-center gap-2">
+                                        <span class="flex w-12 h-12 items-center justify-center shadow-md rounded-md text-3xl bg-white group-hover:bg-slate-800 group-hover:text-slate-100">
+                                            <i class="fa-brands fa-wordpress-simple"></i>
+                                        </span>
+                                        <h2 class="font-semibold  flex flex-col">
+                                            <span class="font-bold text-base">
+                                                Wordpress
+                                            </span>
+                                            <span class="text-xs">
+                                                Deploy By Wordpress
+                                            </span>
+                                        </h2>
+                                    </div>
+                                    <span class="hidden group-hover:flex">
+                                        <i class="fa-solid fa-arrow-right text-xl"></i>
+                                    </span>
+                                </a>
+                            </div>
+
+                            <div class="relative group">
+                                <a @mouseover="tab=3" @mouseleave="tab=0"
+                                 class="flex gap-5 justify-between items-center hover:bg-gray-100 p-2 rounded-lg" href="">
+                                    <div class="flex items-center gap-2">
+                                        <span class="flex w-12 h-12 items-center justify-center shadow-md rounded-md text-3xl bg-white group-hover:bg-slate-800 group-hover:text-slate-100">
+                                            <i class="fa-brands fa-laravel"></i>
+                                        </span>
+                                        <h2 class="font-semibold  flex flex-col">
+                                            <span class="font-bold text-base">
+                                                Laravel
+                                            </span>
+                                            <span class="text-xs">
+                                                BackEnd Development
+                                            </span>
+                                        </h2>
+                                    </div>
+                                    <span class="hidden group-hover:flex">
+                                        <i class="fa-solid fa-arrow-right text-xl"></i>
+                                    </span>
+                                </a>
+                            </div>
+
+                            <div class="relative group">
+                                <a @mouseover="tab=4" @mouseleave="tab=0"
+                                 class="flex gap-5 justify-between items-center hover:bg-gray-100 p-2 rounded-lg" href="">
+                                    <div class="flex items-center gap-2">
+                                        <span class="flex w-12 h-12 items-center justify-center shadow-md rounded-md text-3xl bg-white group-hover:bg-slate-800 group-hover:text-slate-100">
+                                            <i class="fa-solid fa-chart-line"></i>
+                                        </span>
+                                        <h2 class="font-semibold  flex flex-col">
+                                            <span class="font-bold text-base">
+                                                Google SEO
+                                            </span>
+                                            <span class="text-xs">
+                                                RankUp On Google
+                                            </span>
+                                        </h2>
+                                    </div>
+                                    <span class="hidden group-hover:flex">
+                                        <i class="fa-solid fa-arrow-right text-xl"></i>
+                                    </span>
+                                </a>
+                            </div>
+
+                            <div class="relative group">
+                                <a @mouseover="tab=5" @mouseleave="tab=0"
+                                 class="flex gap-5 justify-between items-center hover:bg-gray-100 p-2 rounded-lg" href="">
+                                    <div class=" flex items-center gap-2">
+                                        <span class="flex w-12 h-12 items-center justify-center shadow-md rounded-md text-3xl bg-white group-hover:bg-slate-800 group-hover:text-slate-100">
+                                            <i class="fa-brands fa-vuejs"></i>
+                                        </span>
+                                        <h2 class="font-semibold  flex flex-col">
+                                            <span class="font-bold text-base">
+                                                Vue.JS
+                                            </span>
+                                            <span class="text-xs">
+                                                FrontEnd Development
+                                            </span>
+                                        </h2>
+                                    </div>
+                                    <span class="hidden group-hover:flex">
+                                        <i class="fa-solid fa-arrow-right text-xl"></i>
+                                    </span>
+                                </a>
+                            </div>
+
+                            <div class="relative group">
+                                <a @mouseover="tab=6" @mouseleave="tab=0"
+                                 class="flex gap-5 justify-between items-center hover:bg-gray-100 p-2 rounded-lg" href="">
+                                    <div class="flex items-center gap-2">
+                                        <span class="flex w-12 h-12 items-center justify-center shadow-md rounded-md text-3xl bg-white group-hover:bg-slate-800 group-hover:text-slate-100">
+                                            <i class="fa-brands fa-google"></i>
+                                        </span>
+                                        <h2 class="font-semibold  flex flex-col">
+                                            <span class="font-bold text-base">
+                                                Google Ads
+                                            </span>
+                                            <span class="text-xs">
+                                                Advertise On Google
+                                            </span>
+                                        </h2>
+                                    </div>
+                                    <span class="hidden group-hover:flex">
+                                        <i class="fa-solid fa-arrow-right text-xl"></i>
+                                    </span>
+                                </a>
                             </div>
 
 
-                            <a class="flex items-center gap-2 group" href="">
-                                <span class="flex w-10 h-10 items-center justify-center shadow-md rounded-md text-2xl bg-white group-hover:bg-slate-800 group-hover:text-slate-100">
-                                    <i class="fa-brands fa-wordpress-simple"></i>
-                                </span>
-                                <h2 class="font-semibold  flex flex-col">
-                                    <span class="font-bold">
-                                        Wordpress
-                                    </span>
-                                    <span class="text-xs">
-                                        Wordpress WebDesign
-                                    </span>
-                                </h2>
-                            </a>
 
-                            <a class="flex items-center gap-2 group" href="">
-                                <span class="flex w-10 h-10 items-center justify-center shadow-md rounded-md text-2xl bg-white group-hover:bg-slate-800 group-hover:text-slate-100">
-                                    <i class="fa-brands fa-laravel"></i>
-                                </span>
-                                <h2 class="font-semibold  flex flex-col">
-                                    <span class="font-bold">
-                                         Laravel
-                                    </span>
-                                    <span class="text-xs">
-                                        PHP Web Application
-                                    </span>
-                                </h2>
-                            </a>
+
+
+
+
+
 
 
                         </div>
-                        <div class="w-3/5">
-                            <div class=" bg-white p-3 rounded-lg  flex flex-col gap-1">
-                                <div class="font-bold">
+                        <div class="w-4/12">
+                            <div class="w-full flex flex-col gap-1 items-center justify-center" x-show="tab==0">
+                                <div class="text-3xl font-bold">
+                                    WEB SHATEL
+                                 </div>
+                                 <div class="text-lg font-bold">
+                                     OUR SERVICES
+                                 </div>
+                                {{-- <div class="text-sm">
+                                    Lorem ipsum dolor sitamet conse ctetur adipis icing elit. Voluptate tenetur numquam aliquam,
+                                     quod ipsam est, mollitia reici endis, eum incidunt ab ut?
+                                </div> --}}
+                            </div>
+
+                            <div  x-show="tab==1">
+                                <div class="text-lg font-bold">
                                     What is UI/UX ?
                                 </div>
-                                <div class="">
+                                <div class="text-sm">
+                                    Lorem ipsum dolor sitamet conse ctetur adipis icing elit. Voluptate tenetur numquam aliquam,
+                                     quod ipsam est, mollitia reici endis, eum incidunt ab ut?
+                                </div>
+                            </div>
+
+                            <div  x-show="tab==2">
+                                <div class="text-lg font-bold">
+                                    What is Wordpress ?
+                                </div>
+                                <div class="text-sm">
+                                    Lorem ipsum dolor sitamet conse ctetur adipis icing elit. Voluptate tenetur numquam aliquam,
+                                     quod ipsam est, mollitia reici endis, eum incidunt ab ut?
+                                </div>
+                            </div>
+
+                            <div  x-show="tab==3">
+                                <div class="text-lg font-bold">
+                                    What is Laravel ?
+                                </div>
+                                <div class="text-sm">
+                                    Lorem ipsum dolor sitamet conse ctetur adipis icing elit. Voluptate tenetur numquam aliquam,
+                                     quod ipsam est, mollitia reici endis, eum incidunt ab ut?
+                                </div>
+                            </div>
+
+                            <div  x-show="tab==4">
+                                <div class="text-lg font-bold">
+                                    What is SEO ?
+                                </div>
+                                <div class="text-sm">
+                                    Lorem ipsum dolor sitamet conse ctetur adipis icing elit. Voluptate tenetur numquam aliquam,
+                                     quod ipsam est, mollitia reici endis, eum incidunt ab ut?
+                                </div>
+                            </div>
+
+                            <div  x-show="tab==5">
+                                <div class="text-lg font-bold">
+                                    What is Vue.js ?
+                                </div>
+                                <div class="text-sm">
+                                    Lorem ipsum dolor sitamet conse ctetur adipis icing elit. Voluptate tenetur numquam aliquam,
+                                     quod ipsam est, mollitia reici endis, eum incidunt ab ut?
+                                </div>
+                            </div>
+
+                            <div  x-show="tab==6">
+                                <div class="text-lg font-bold">
+                                    What is Google Ads ?
+                                </div>
+                                <div class="text-sm">
                                     Lorem ipsum dolor sitamet conse ctetur adipis icing elit. Voluptate tenetur numquam aliquam,
                                      quod ipsam est, mollitia reici endis, eum incidunt ab ut?
                                 </div>
