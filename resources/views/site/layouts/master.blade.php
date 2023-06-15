@@ -13,7 +13,7 @@
     <script src="{{asset('js/app.js')}}"></script>
 </head>
 <body class="bg-gray-300 text-sm">
-        <section class="bg-white shadow-md py-4">
+        <section >
             @include('site.layouts.header')
         </section>
 
