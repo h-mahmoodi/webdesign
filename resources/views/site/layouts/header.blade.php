@@ -1,8 +1,8 @@
-<div class="bg-indigo-800 shadow-md py-2">
+<div class="bg-gray-800 shadow-md py-2">
     <div class="container mx-auto flex justify-between items-center">
 
-        <div>
-            ddsdd
+        <div class="text-white font-semibold">
+            Web Design | Web Application | ECommerce
         </div>
 
         <div class="flex gap-3 items-center">
@@ -23,22 +23,27 @@
     </div>
 
 </div>
-<div class="bg-white shadow-md py-4">
+<div class="bg-white shadow-md py-2">
     <div class="container mx-auto flex justify-between items-center">
-        <div class="text-3xl font-bold">
-            Web Shatel
+        <div>
+            <div class="text-2xl font-bold">
+                Web Shatel
+            </div>
+            <div class="text-base font-semibold">
+                Digital Marketing Agancy
+            </div>
         </div>
         <div>
             <ul class="flex gap-8 items-center justify-center font-semibold">
-                <li class=" text-indigo-800 font-bold text-base">
+                <li class=" text-indigo-800 font-bold ">
                     Home
                 </li>
-                <li class=" text-gray-700" x-data="{modal:false}">
-                    <div @click="modal=!modal" class="cursor-pointer text-base font-bold bg-indigo-800 text-white px-4 py-2 rounded-md shadow-md">
+                <li class=" text-gray-700 " x-data="{modal:false}">
+                    <div @click="modal=!modal" class="cursor-pointer  bg-gray-800 text-white px-4 py-2 rounded-md shadow-md">
                         Services
                     </div>
                     <div x-show="modal" x-transition x-cloak
-                    class="absolute mt-4 top-16 left-0  w-screen flex items-center justify-center">
+                    class="absolute mt-2 top-28 left-0  w-screen flex items-center justify-center">
                         <div class="grid grid-cols-12 gap-3  items-center w-[800px] bg-white p-5 rounded-lg shadow-md" x-data="{tab:0}">
                             <div class="col-span-8 grid grid-cols-2 gap-2 border-r pr-3">
 
@@ -264,30 +269,24 @@
                         </div>
                     </div>
                 </li>
-                <li class=" text-base">
+                <li class=" ">
                     Blog
                 </li>
-                <li class=" text-base">
+                <li class="">
                     About Us
                 </li>
-                <li class="  text-base">
+                <li class="  ">
                     Contact Us
                 </li>
             </ul>
         </div>
         <div class="flex gap-3 items-center">
-            <span class="flex w-8 h-8 items-center justify-center shadow-md rounded-md text-xl bg-white group-hover:bg-slate-800 group-hover:text-slate-100">
-                <i class="fa-brands fa-facebook-f"></i>
-            </span>
-            <span class="flex w-8 h-8 items-center justify-center shadow-md rounded-md text-xl bg-white group-hover:bg-slate-800 group-hover:text-slate-100">
-                <i class="fa-brands fa-linkedin-in"></i>
-            </span>
-            <span class="flex w-8 h-8 items-center justify-center shadow-md rounded-md text-xl bg-white group-hover:bg-slate-800 group-hover:text-slate-100">
-                <i class="fa-brands fa-instagram"></i>
-            </span>
-            <span class="flex w-8 h-8 items-center justify-center shadow-md rounded-md text-xl bg-white group-hover:bg-slate-800 group-hover:text-slate-100">
-                <i class="fa-brands fa-whatsapp"></i>
-            </span>
+            <a href="" class=" py-2 px-4 bg-gray-800 text-white rounded-md font-semibold">
+                Order Now
+            </a>
+            <a href="" class=" py-2 px-4 bg-gray-800 text-white rounded-md font-semibold">
+                Order Now
+            </a>
         </div>
     </div>
 </div>
