@@ -1,4 +1,4 @@
-<div class="bg-violet-900 shadow-md py-2">
+<div class="bg-indigo-800 shadow-md py-2">
     <div class="container mx-auto flex flex-col gap-3 md:flex-row justify-between items-center">
 
         <div class="text-white font-semibold">
@@ -26,7 +26,7 @@
 <div class="bg-white shadow-md py-2 px-2">
     <div class="container mx-auto flex justify-between items-center ">
         <div>
-            <div class="text-2xl md:text-3xl font-semibold">
+            <div class="text-2xl md:text-3xl font-bold">
                 WEB SHATEL
             </div>
             <div class="text-sm md:text-base font-semibold">
@@ -50,9 +50,9 @@
                         Services
                     </div>
                     <div x-show="modal" x-transition x-cloak
-                    class="absolute mt-2 top-28 left-0  w-screen flex items-center justify-center">
-                        <div class="grid grid-cols-12 gap-3  items-center w-[800px] bg-white p-5 rounded-lg shadow-md" x-data="{tab:0}">
-                            <div class="col-span-8 grid grid-cols-2 gap-2 border-r pr-3">
+                    class="absolute mt-2 top-28 left-0  w-screen flex items-center justify-center z-50 ">
+                        <div class="grid grid-cols-12 gap-3  items-center w-full bg-white p-5 rounded-lg shadow-md container my-2" x-data="{tab:0}">
+                            <div class="col-span-8 grid grid-cols-3 gap-2 border-r pr-3">
 
                                 <div class="relative group">
                                     <a @mouseover="tab=1" @mouseleave="tab=0"
@@ -98,6 +98,82 @@
                                         </span>
                                     </a>
                                 </div>
+
+                                <div class="relative group">
+                                    <a @mouseover="tab=2" @mouseleave="tab=0"
+                                     class="flex gap-5 justify-between items-center hover:bg-gray-100 p-2 rounded-lg duration-200" href="">
+                                        <div class="w-full flex items-center gap-2">
+                                            <span class="flex w-16 h-12 items-center justify-center shadow-md rounded-md text-2xl bg-white group-hover:bg-indigo-800 duration-200 group-hover:text-slate-100">
+                                                <i class="fa-brands fa-wordpress-simple"></i>
+                                            </span>
+                                            <h2 class="font-semibold  flex flex-col">
+                                                <span class="font-bold text-sm">
+                                                    Wordpress Web Design
+                                                </span>
+                                                <span class="text-xs">
+                                                    Create & Design Your Own Website With Wordpress CMS / Most Popular
+                                                </span>
+                                            </h2>
+                                        </div>
+                                        <div class="w-5">
+                                            <span class="hidden group-hover:flex text-indigo-800 duration-200">
+                                                <i class="fa-solid fa-arrow-right text-xl"></i>
+                                            </span>
+                                        </div>
+
+                                    </a>
+                                </div>
+
+                                <div class="relative group">
+                                    <a @mouseover="tab=2" @mouseleave="tab=0"
+                                     class="flex gap-5 justify-between items-center hover:bg-gray-100 p-2 rounded-lg duration-200" href="">
+                                        <div class="w-full flex items-center gap-2">
+                                            <span class="flex w-16 h-12 items-center justify-center shadow-md rounded-md text-2xl bg-white group-hover:bg-indigo-800 duration-200 group-hover:text-slate-100">
+                                                <i class="fa-brands fa-wordpress-simple"></i>
+                                            </span>
+                                            <h2 class="font-semibold  flex flex-col">
+                                                <span class="font-bold text-sm">
+                                                    Joomla Web Design
+                                                </span>
+                                                <span class="text-xs">
+                                                    Create & Design Your Own Website With Joomla CMS
+                                                </span>
+                                            </h2>
+                                        </div>
+                                        <div class="w-5">
+                                            <span class="hidden group-hover:flex text-indigo-800 duration-200">
+                                                <i class="fa-solid fa-arrow-right text-xl"></i>
+                                            </span>
+                                        </div>
+
+                                    </a>
+                                </div>
+
+                                <div class="relative group">
+                                    <a @mouseover="tab=2" @mouseleave="tab=0"
+                                     class="flex gap-5 justify-between items-center hover:bg-gray-100 p-2 rounded-lg duration-200" href="">
+                                        <div class="w-full flex items-center gap-2">
+                                            <span class="flex w-16 h-12 items-center justify-center shadow-md rounded-md text-2xl bg-white group-hover:bg-indigo-800 duration-200 group-hover:text-slate-100">
+                                                <i class="fa-brands fa-wordpress-simple"></i>
+                                            </span>
+                                            <h2 class="font-semibold  flex flex-col">
+                                                <span class="font-bold text-sm">
+                                                    Laravel Web Application
+                                                </span>
+                                                <span class="text-xs">
+                                                    Design & Develope Your Own Web App With Laravel PHP Freamwork
+                                                </span>
+                                            </h2>
+                                        </div>
+                                        <div class="w-5">
+                                            <span class="hidden group-hover:flex text-indigo-800 duration-200">
+                                                <i class="fa-solid fa-arrow-right text-xl"></i>
+                                            </span>
+                                        </div>
+
+                                    </a>
+                                </div>
+
 
                                 <div class="relative group">
                                     <a @mouseover="tab=3" @mouseleave="tab=0"
@@ -297,10 +373,10 @@
             <i class="fa-solid fa-bars text-3xl"></i>
         </div>
         <div class="hidden md:flex gap-3 items-center">
-            <a href="" class=" py-2 px-4 bg-gray-800 text-white rounded-md font-semibold">
+            <a href="" class=" py-2 px-4 bg-violet-900 text-white rounded-md font-semibold">
                 Order Now
             </a>
-            <a href="" class=" py-2 px-4 bg-gray-800 text-white rounded-md font-semibold">
+            <a href="" class=" py-2 px-4 bg-orange-600 text-white rounded-md font-semibold">
                 Order Now
             </a>
         </div>
